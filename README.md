@@ -4,6 +4,7 @@ Use this plugin to integrate the yeoman build into your maven build.
 
 ## Launched commands
 * npm install
+* bower cache clean
 * bower install
 * grunt
 
@@ -32,7 +33,7 @@ Yeoman application is placed into the *yo* directory at the top of the project h
 ## Usage
 Plugin declaration :
 
-	<plugin>	
+	<plugin>
    		<groupId>com.github.trecloux</groupId>
    	    <artifactId>yeoman-maven-plugin</artifactId>
    	    <version>0.1</version>
@@ -82,14 +83,6 @@ Configure the clean plugin in order to delete generated directories
             </filesets>
         </configuration>
     </plugin>
-    
+
 ## License
 This project is licensed under [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html)
-
-
-
-	     
-	     
-	     
-
-

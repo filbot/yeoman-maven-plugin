@@ -38,6 +38,8 @@ public class YeomanMojo extends AbstractMojo {
 
     @Parameter( defaultValue = "install", required = true )
     String npmInstallArgs;
+    @Parameter( defaultValue = "cache clean", required = true )
+    String bowerCleanArgs;
     @Parameter( defaultValue = "install --no-color", required = true )
     String bowerInstallArgs;
     @Parameter( defaultValue = "test --no-color", required = true )
@@ -59,6 +61,7 @@ public class YeomanMojo extends AbstractMojo {
 
     void bowerInstall() throws MojoExecutionException {
         logToolVersion("bower");
+        logAndExecuteCommand("bower " + bowerCleanArgs);
         logAndExecuteCommand("bower " + bowerInstallArgs);
     }
     void grunt() throws MojoExecutionException {
